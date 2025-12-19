@@ -1,0 +1,26 @@
+running egg_info
+creating ../../build/snowbot_servos/snowbot_servos.egg-info
+writing ../../build/snowbot_servos/snowbot_servos.egg-info/PKG-INFO
+writing dependency_links to ../../build/snowbot_servos/snowbot_servos.egg-info/dependency_links.txt
+writing entry points to ../../build/snowbot_servos/snowbot_servos.egg-info/entry_points.txt
+writing requirements to ../../build/snowbot_servos/snowbot_servos.egg-info/requires.txt
+writing top-level names to ../../build/snowbot_servos/snowbot_servos.egg-info/top_level.txt
+writing manifest file '../../build/snowbot_servos/snowbot_servos.egg-info/SOURCES.txt'
+reading manifest file '../../build/snowbot_servos/snowbot_servos.egg-info/SOURCES.txt'
+writing manifest file '../../build/snowbot_servos/snowbot_servos.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pi/snowbot_ws/build/snowbot_servos/build
+creating /home/pi/snowbot_ws/build/snowbot_servos/build/lib
+creating /home/pi/snowbot_ws/build/snowbot_servos/build/lib/snowbot_servos
+copying snowbot_servos/servo_node.py -> /home/pi/snowbot_ws/build/snowbot_servos/build/lib/snowbot_servos
+running install
+running install_lib
+creating /home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages/snowbot_servos
+copying /home/pi/snowbot_ws/build/snowbot_servos/build/lib/snowbot_servos/servo_node.py -> /home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages/snowbot_servos
+byte-compiling /home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages/snowbot_servos/servo_node.py to servo_node.cpython-310.pyc
+running install_data
+creating /home/pi/snowbot_ws/install/snowbot_servos/share
+creating /home/pi/snowbot_ws/install/snowbot_servos/share/ament_index
+creating /home/pi/snowbot_ws/install/snowbot_servos/share/ament_index/resource_index
+creating /home/pi/snowbot_ws/install/snowbot_servos/share/ament_index/resource_index/packages

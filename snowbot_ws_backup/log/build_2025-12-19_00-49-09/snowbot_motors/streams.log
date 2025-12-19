@@ -1,0 +1,21 @@
+[8.033s] Invoking command in '/home/pi/snowbot_ws/src/snowbot_motors': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_motors build --build-base /home/pi/snowbot_ws/build/snowbot_motors/build install --record /home/pi/snowbot_ws/build/snowbot_motors/install.log --single-version-externally-managed install_data
+[9.744s] running egg_info
+[9.748s] writing ../../build/snowbot_motors/snowbot_motors.egg-info/PKG-INFO
+[9.752s] writing dependency_links to ../../build/snowbot_motors/snowbot_motors.egg-info/dependency_links.txt
+[9.753s] writing entry points to ../../build/snowbot_motors/snowbot_motors.egg-info/entry_points.txt
+[9.755s] writing requirements to ../../build/snowbot_motors/snowbot_motors.egg-info/requires.txt
+[9.759s] writing top-level names to ../../build/snowbot_motors/snowbot_motors.egg-info/top_level.txt
+[9.769s] reading manifest file '../../build/snowbot_motors/snowbot_motors.egg-info/SOURCES.txt'
+[9.790s] writing manifest file '../../build/snowbot_motors/snowbot_motors.egg-info/SOURCES.txt'
+[9.791s] running build
+[9.792s] running build_py
+[9.795s] running install
+[9.804s] running install_lib
+[9.809s] running install_data
+[9.825s] running install_egg_info
+[9.828s] removing '/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages/snowbot_motors-0.0.0-py3.10.egg-info' (and everything under it)
+[9.832s] Copying ../../build/snowbot_motors/snowbot_motors.egg-info to /home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages/snowbot_motors-0.0.0-py3.10.egg-info
+[9.844s] running install_scripts
+[10.008s] Installing motor_node script to /home/pi/snowbot_ws/install/snowbot_motors/lib/snowbot_motors
+[10.018s] writing list of installed files to '/home/pi/snowbot_ws/build/snowbot_motors/install.log'
+[10.449s] Invoked command in '/home/pi/snowbot_ws/src/snowbot_motors' returned '0': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_motors build --build-base /home/pi/snowbot_ws/build/snowbot_motors/build install --record /home/pi/snowbot_ws/build/snowbot_motors/install.log --single-version-externally-managed install_data

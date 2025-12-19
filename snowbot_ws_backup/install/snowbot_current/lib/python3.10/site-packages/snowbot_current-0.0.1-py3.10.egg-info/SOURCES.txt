@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/snowbot_current/snowbot_current.egg-info/PKG-INFO
+../../build/snowbot_current/snowbot_current.egg-info/SOURCES.txt
+../../build/snowbot_current/snowbot_current.egg-info/dependency_links.txt
+../../build/snowbot_current/snowbot_current.egg-info/entry_points.txt
+../../build/snowbot_current/snowbot_current.egg-info/requires.txt
+../../build/snowbot_current/snowbot_current.egg-info/top_level.txt
+../../build/snowbot_current/snowbot_current.egg-info/zip-safe
+resource/snowbot_current
+snowbot_current/__init__.py
+snowbot_current/current_node.py
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

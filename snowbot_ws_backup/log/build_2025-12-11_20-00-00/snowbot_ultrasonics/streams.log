@@ -1,0 +1,24 @@
+[2.904s] Invoking command in '/home/pi/snowbot_ws/src/snowbot_ultrasonics': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_ultrasonics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_ultrasonics build --build-base /home/pi/snowbot_ws/build/snowbot_ultrasonics/build install --record /home/pi/snowbot_ws/build/snowbot_ultrasonics/install.log --single-version-externally-managed install_data
+[4.017s] running egg_info
+[4.020s] writing ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/PKG-INFO
+[4.021s] writing dependency_links to ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/dependency_links.txt
+[4.023s] writing entry points to ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/entry_points.txt
+[4.023s] writing requirements to ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/requires.txt
+[4.024s] writing top-level names to ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/top_level.txt
+[4.031s] reading manifest file '../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/SOURCES.txt'
+[4.035s] writing manifest file '../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/SOURCES.txt'
+[4.036s] running build
+[4.036s] running build_py
+[4.037s] copying snowbot_ultrasonics/ultrasonic_node.py -> /home/pi/snowbot_ws/build/snowbot_ultrasonics/build/lib/snowbot_ultrasonics
+[4.038s] running install
+[4.040s] running install_lib
+[4.043s] copying /home/pi/snowbot_ws/build/snowbot_ultrasonics/build/lib/snowbot_ultrasonics/ultrasonic_node.py -> /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics
+[4.046s] byte-compiling /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics/ultrasonic_node.py to ultrasonic_node.cpython-310.pyc
+[4.049s] running install_data
+[4.050s] running install_egg_info
+[4.061s] removing '/home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics-0.0.0-py3.10.egg-info' (and everything under it)
+[4.063s] Copying ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info to /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics-0.0.0-py3.10.egg-info
+[4.068s] running install_scripts
+[4.144s] Installing ultrasonic_node script to /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/snowbot_ultrasonics
+[4.145s] writing list of installed files to '/home/pi/snowbot_ws/build/snowbot_ultrasonics/install.log'
+[4.263s] Invoked command in '/home/pi/snowbot_ws/src/snowbot_ultrasonics' returned '0': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_ultrasonics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_ultrasonics build --build-base /home/pi/snowbot_ws/build/snowbot_ultrasonics/build install --record /home/pi/snowbot_ws/build/snowbot_ultrasonics/install.log --single-version-externally-managed install_data

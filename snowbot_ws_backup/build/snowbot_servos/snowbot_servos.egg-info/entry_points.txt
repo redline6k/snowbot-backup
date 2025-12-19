@@ -1,0 +1,3 @@
+[console_scripts]
+servo_node = snowbot_servos.servo_node:main
+

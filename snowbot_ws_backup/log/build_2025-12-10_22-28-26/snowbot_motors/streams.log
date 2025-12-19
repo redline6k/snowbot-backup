@@ -1,0 +1,25 @@
+[2.844s] Invoking command in '/home/pi/snowbot_ws/src/snowbot_motors': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_motors build --build-base /home/pi/snowbot_ws/build/snowbot_motors/build install --record /home/pi/snowbot_ws/build/snowbot_motors/install.log --single-version-externally-managed install_data
+[3.943s] running egg_info
+[3.946s] writing ../../build/snowbot_motors/snowbot_motors.egg-info/PKG-INFO
+[3.947s] writing dependency_links to ../../build/snowbot_motors/snowbot_motors.egg-info/dependency_links.txt
+[3.948s] writing entry points to ../../build/snowbot_motors/snowbot_motors.egg-info/entry_points.txt
+[3.949s] writing requirements to ../../build/snowbot_motors/snowbot_motors.egg-info/requires.txt
+[3.949s] writing top-level names to ../../build/snowbot_motors/snowbot_motors.egg-info/top_level.txt
+[3.957s] reading manifest file '../../build/snowbot_motors/snowbot_motors.egg-info/SOURCES.txt'
+[3.961s] writing manifest file '../../build/snowbot_motors/snowbot_motors.egg-info/SOURCES.txt'
+[3.962s] running build
+[3.962s] running build_py
+[3.963s] copying snowbot_motors/motor_node.py -> /home/pi/snowbot_ws/build/snowbot_motors/build/lib/snowbot_motors
+[3.964s] running install
+[3.966s] running install_lib
+[3.969s] copying /home/pi/snowbot_ws/build/snowbot_motors/build/lib/snowbot_motors/motor_node.py -> /home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages/snowbot_motors
+[3.971s] byte-compiling /home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages/snowbot_motors/motor_node.py to motor_node.cpython-310.pyc
+[3.975s] Sorry: IndentationError: expected an indented block after function definition on line 73 (motor_node.py, line 74)
+[3.976s] running install_data
+[3.976s] running install_egg_info
+[3.987s] removing '/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages/snowbot_motors-0.0.0-py3.10.egg-info' (and everything under it)
+[3.988s] Copying ../../build/snowbot_motors/snowbot_motors.egg-info to /home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages/snowbot_motors-0.0.0-py3.10.egg-info
+[3.994s] running install_scripts
+[4.068s] Installing motor_node script to /home/pi/snowbot_ws/install/snowbot_motors/lib/snowbot_motors
+[4.069s] writing list of installed files to '/home/pi/snowbot_ws/build/snowbot_motors/install.log'
+[4.187s] Invoked command in '/home/pi/snowbot_ws/src/snowbot_motors' returned '0': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_motors build --build-base /home/pi/snowbot_ws/build/snowbot_motors/build install --record /home/pi/snowbot_ws/build/snowbot_motors/install.log --single-version-externally-managed install_data

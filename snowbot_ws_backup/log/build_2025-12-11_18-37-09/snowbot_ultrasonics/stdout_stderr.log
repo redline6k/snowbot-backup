@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info
+writing ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/PKG-INFO
+writing dependency_links to ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/dependency_links.txt
+writing entry points to ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/entry_points.txt
+writing requirements to ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/requires.txt
+writing top-level names to ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/top_level.txt
+writing manifest file '../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/SOURCES.txt'
+reading manifest file '../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/SOURCES.txt'
+writing manifest file '../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pi/snowbot_ws/build/snowbot_ultrasonics/build
+creating /home/pi/snowbot_ws/build/snowbot_ultrasonics/build/lib
+creating /home/pi/snowbot_ws/build/snowbot_ultrasonics/build/lib/snowbot_ultrasonics
+copying snowbot_ultrasonics/__init__.py -> /home/pi/snowbot_ws/build/snowbot_ultrasonics/build/lib/snowbot_ultrasonics
+copying snowbot_ultrasonics/ultrasonic_node.py -> /home/pi/snowbot_ws/build/snowbot_ultrasonics/build/lib/snowbot_ultrasonics
+running install
+running install_lib
+creating /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics
+copying /home/pi/snowbot_ws/build/snowbot_ultrasonics/build/lib/snowbot_ultrasonics/__init__.py -> /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics
+copying /home/pi/snowbot_ws/build/snowbot_ultrasonics/build/lib/snowbot_ultrasonics/ultrasonic_node.py -> /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics
+byte-compiling /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics/ultrasonic_node.py to ultrasonic_node.cpython-310.pyc
+running install_data
+creating /home/pi/snowbot_ws/install/snowbot_ultrasonics/share/ament_index
+creating /home/pi/snowbot_ws/install/snowbot_ultrasonics/share/ament_index/resource_index
+creating /home/pi/snowbot_ws/install/snowbot_ultrasonics/share/ament_index/resource_index/packages
+copying resource/snowbot_ultrasonics -> /home/pi/snowbot_ws/install/snowbot_ultrasonics/share/ament_index/resource_index/packages
+copying package.xml -> /home/pi/snowbot_ws/install/snowbot_ultrasonics/share/snowbot_ultrasonics
+running install_egg_info
+Copying ../../build/snowbot_ultrasonics/snowbot_ultrasonics.egg-info to /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ultrasonic_node script to /home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/snowbot_ultrasonics
+writing list of installed files to '/home/pi/snowbot_ws/build/snowbot_ultrasonics/install.log'

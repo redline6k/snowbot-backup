@@ -1,0 +1,6 @@
+source;share/snowbot_ultrasonics/hook/pythonpath.ps1
+source;share/snowbot_ultrasonics/hook/pythonpath.dsv
+source;share/snowbot_ultrasonics/hook/pythonpath.sh
+source;share/snowbot_ultrasonics/hook/ament_prefix_path.ps1
+source;share/snowbot_ultrasonics/hook/ament_prefix_path.dsv
+source;share/snowbot_ultrasonics/hook/ament_prefix_path.sh

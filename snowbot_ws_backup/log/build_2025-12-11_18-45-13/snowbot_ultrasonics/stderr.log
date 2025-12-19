@@ -1,0 +1,5 @@
+  File "/home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages/snowbot_ultrasonics/ultrasonic_node.py", line 8
+    from digitalio import Direction as digitalio.Direction
+                                                ^
+SyntaxError: invalid syntax
+

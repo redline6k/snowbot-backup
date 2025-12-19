@@ -1,0 +1,76 @@
+[0.000000] (-) TimerEvent: {}
+[0.001572] (-) JobUnselected: {'identifier': 'snowbot_imu'}
+[0.001701] (-) JobUnselected: {'identifier': 'snowbot_motors'}
+[0.001781] (-) JobUnselected: {'identifier': 'snowbot_servos'}
+[0.001858] (-) JobUnselected: {'identifier': 'snowbot_ultrasonics'}
+[0.001988] (snowbot_current) JobQueued: {'identifier': 'snowbot_current', 'dependencies': OrderedDict()}
+[0.002482] (snowbot_current) JobStarted: {'identifier': 'snowbot_current'}
+[0.098653] (-) TimerEvent: {}
+[0.199228] (-) TimerEvent: {}
+[0.299868] (-) TimerEvent: {}
+[0.400507] (-) TimerEvent: {}
+[0.501119] (-) TimerEvent: {}
+[0.601777] (-) TimerEvent: {}
+[0.702433] (-) TimerEvent: {}
+[0.803007] (-) TimerEvent: {}
+[0.903577] (-) TimerEvent: {}
+[1.004174] (-) TimerEvent: {}
+[1.104761] (-) TimerEvent: {}
+[1.205480] (-) TimerEvent: {}
+[1.306554] (-) TimerEvent: {}
+[1.407327] (-) TimerEvent: {}
+[1.507964] (-) TimerEvent: {}
+[1.608631] (-) TimerEvent: {}
+[1.709310] (-) TimerEvent: {}
+[1.809915] (-) TimerEvent: {}
+[1.910545] (-) TimerEvent: {}
+[2.011154] (-) TimerEvent: {}
+[2.111718] (-) TimerEvent: {}
+[2.212322] (-) TimerEvent: {}
+[2.312908] (-) TimerEvent: {}
+[2.413519] (-) TimerEvent: {}
+[2.514154] (-) TimerEvent: {}
+[2.614762] (-) TimerEvent: {}
+[2.715351] (-) TimerEvent: {}
+[2.816139] (-) TimerEvent: {}
+[2.917165] (-) TimerEvent: {}
+[2.946212] (snowbot_current) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/snowbot_current', 'build', '--build-base', '/home/pi/snowbot_ws/build/snowbot_current/build', 'install', '--record', '/home/pi/snowbot_ws/build/snowbot_current/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/pi/snowbot_ws/src/snowbot_current', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pi', 'SSH_CLIENT': '10.0.0.56 55744 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/pi', 'OLDPWD': '/home/pi/snowbot_ws', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/pi/snowbot_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/pi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': 'localhost:10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/pi/snowbot_ws/install/snowbot_current:/home/pi/snowbot_ws/install/snowbot_ultrasonics:/home/pi/snowbot_ws/install/snowbot_servos:/home/pi/snowbot_ws/install/snowbot_motors:/home/pi/snowbot_ws/install/snowbot_imu:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/pi/snowbot_ws/build/snowbot_current', 'SSH_CONNECTION': '10.0.0.56 55744 10.0.0.230 22', 'PYTHONPATH': '/home/pi/snowbot_ws/build/snowbot_current/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_current/lib/python3.10/site-packages:/home/pi/snowbot_ws/install/snowbot_current/lib/python3.10/site-packages:/home/pi/snowbot_ws/install/snowbot_ultrasonics/lib/python3.10/site-packages:/home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages:/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages:/home/pi/snowbot_ws/install/snowbot_imu/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.017348] (-) TimerEvent: {}
+[3.118031] (-) TimerEvent: {}
+[3.218637] (-) TimerEvent: {}
+[3.319241] (-) TimerEvent: {}
+[3.419818] (-) TimerEvent: {}
+[3.520414] (-) TimerEvent: {}
+[3.621060] (-) TimerEvent: {}
+[3.721655] (-) TimerEvent: {}
+[3.822271] (-) TimerEvent: {}
+[3.922994] (-) TimerEvent: {}
+[4.023580] (-) TimerEvent: {}
+[4.099216] (snowbot_current) StdoutLine: {'line': b'running egg_info\n'}
+[4.102788] (snowbot_current) StdoutLine: {'line': b'writing ../../build/snowbot_current/snowbot_current.egg-info/PKG-INFO\n'}
+[4.103855] (snowbot_current) StdoutLine: {'line': b'writing dependency_links to ../../build/snowbot_current/snowbot_current.egg-info/dependency_links.txt\n'}
+[4.104681] (snowbot_current) StdoutLine: {'line': b'writing entry points to ../../build/snowbot_current/snowbot_current.egg-info/entry_points.txt\n'}
+[4.105587] (snowbot_current) StdoutLine: {'line': b'writing requirements to ../../build/snowbot_current/snowbot_current.egg-info/requires.txt\n'}
+[4.106300] (snowbot_current) StdoutLine: {'line': b'writing top-level names to ../../build/snowbot_current/snowbot_current.egg-info/top_level.txt\n'}
+[4.114144] (snowbot_current) StdoutLine: {'line': b"reading manifest file '../../build/snowbot_current/snowbot_current.egg-info/SOURCES.txt'\n"}
+[4.117887] (snowbot_current) StdoutLine: {'line': b"writing manifest file '../../build/snowbot_current/snowbot_current.egg-info/SOURCES.txt'\n"}
+[4.118536] (snowbot_current) StdoutLine: {'line': b'running build\n'}
+[4.118986] (snowbot_current) StdoutLine: {'line': b'running build_py\n'}
+[4.119609] (snowbot_current) StdoutLine: {'line': b'copying snowbot_current/current_node.py -> /home/pi/snowbot_ws/build/snowbot_current/build/lib/snowbot_current\n'}
+[4.120851] (snowbot_current) StdoutLine: {'line': b'running install\n'}
+[4.122088] (snowbot_current) StdoutLine: {'line': b'running install_lib\n'}
+[4.123714] (-) TimerEvent: {}
+[4.125511] (snowbot_current) StdoutLine: {'line': b'copying /home/pi/snowbot_ws/build/snowbot_current/build/lib/snowbot_current/current_node.py -> /home/pi/snowbot_ws/install/snowbot_current/lib/python3.10/site-packages/snowbot_current\n'}
+[4.128345] (snowbot_current) StdoutLine: {'line': b'byte-compiling /home/pi/snowbot_ws/install/snowbot_current/lib/python3.10/site-packages/snowbot_current/current_node.py to current_node.cpython-310.pyc\n'}
+[4.131193] (snowbot_current) StdoutLine: {'line': b'running install_data\n'}
+[4.131902] (snowbot_current) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.139208] (snowbot_current) StdoutLine: {'line': b"removing '/home/pi/snowbot_ws/install/snowbot_current/lib/python3.10/site-packages/snowbot_current-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[4.140848] (snowbot_current) StdoutLine: {'line': b'Copying ../../build/snowbot_current/snowbot_current.egg-info to /home/pi/snowbot_ws/install/snowbot_current/lib/python3.10/site-packages/snowbot_current-0.0.1-py3.10.egg-info\n'}
+[4.145962] (snowbot_current) StdoutLine: {'line': b'running install_scripts\n'}
+[4.223879] (-) TimerEvent: {}
+[4.227436] (snowbot_current) StdoutLine: {'line': b'Installing current_node script to /home/pi/snowbot_ws/install/snowbot_current/lib/snowbot_current\n'}
+[4.229012] (snowbot_current) StdoutLine: {'line': b"writing list of installed files to '/home/pi/snowbot_ws/build/snowbot_current/install.log'\n"}
+[4.324162] (-) TimerEvent: {}
+[4.345461] (snowbot_current) CommandEnded: {'returncode': 0}
+[4.393154] (snowbot_current) JobEnded: {'identifier': 'snowbot_current', 'rc': 0}
+[4.395970] (-) EventReactorShutdown: {}

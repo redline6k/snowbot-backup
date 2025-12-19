@@ -1,0 +1,3 @@
+[console_scripts]
+ultrasonic_node = snowbot_ultrasonics.ultrasonic_node:main
+

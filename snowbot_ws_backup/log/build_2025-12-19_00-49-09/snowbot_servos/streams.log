@@ -1,0 +1,24 @@
+[7.990s] Invoking command in '/home/pi/snowbot_ws/src/snowbot_servos': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_servos/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_servos build --build-base /home/pi/snowbot_ws/build/snowbot_servos/build install --record /home/pi/snowbot_ws/build/snowbot_servos/install.log --single-version-externally-managed install_data
+[9.654s] running egg_info
+[9.658s] writing ../../build/snowbot_servos/snowbot_servos.egg-info/PKG-INFO
+[9.661s] writing dependency_links to ../../build/snowbot_servos/snowbot_servos.egg-info/dependency_links.txt
+[9.663s] writing entry points to ../../build/snowbot_servos/snowbot_servos.egg-info/entry_points.txt
+[9.665s] writing requirements to ../../build/snowbot_servos/snowbot_servos.egg-info/requires.txt
+[9.666s] writing top-level names to ../../build/snowbot_servos/snowbot_servos.egg-info/top_level.txt
+[9.680s] reading manifest file '../../build/snowbot_servos/snowbot_servos.egg-info/SOURCES.txt'
+[9.693s] writing manifest file '../../build/snowbot_servos/snowbot_servos.egg-info/SOURCES.txt'
+[9.694s] running build
+[9.695s] running build_py
+[9.700s] copying snowbot_servos/servo_node.py -> /home/pi/snowbot_ws/build/snowbot_servos/build/lib/snowbot_servos
+[9.703s] running install
+[9.707s] running install_lib
+[9.718s] copying /home/pi/snowbot_ws/build/snowbot_servos/build/lib/snowbot_servos/servo_node.py -> /home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages/snowbot_servos
+[9.727s] byte-compiling /home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages/snowbot_servos/servo_node.py to servo_node.cpython-310.pyc
+[9.730s] running install_data
+[9.737s] running install_egg_info
+[9.755s] removing '/home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages/snowbot_servos-0.0.1-py3.10.egg-info' (and everything under it)
+[9.757s] Copying ../../build/snowbot_servos/snowbot_servos.egg-info to /home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages/snowbot_servos-0.0.1-py3.10.egg-info
+[9.777s] running install_scripts
+[9.879s] Installing servo_node script to /home/pi/snowbot_ws/install/snowbot_servos/lib/snowbot_servos
+[9.882s] writing list of installed files to '/home/pi/snowbot_ws/build/snowbot_servos/install.log'
+[10.214s] Invoked command in '/home/pi/snowbot_ws/src/snowbot_servos' returned '0': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_servos/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_servos/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_servos build --build-base /home/pi/snowbot_ws/build/snowbot_servos/build install --record /home/pi/snowbot_ws/build/snowbot_servos/install.log --single-version-externally-managed install_data

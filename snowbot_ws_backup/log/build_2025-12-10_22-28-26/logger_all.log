@@ -1,0 +1,166 @@
+[0.452s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'snowbot_motors']
+[0.453s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['snowbot_motors'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa460d8d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa4796860>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa4796860>>, mixin_verb=('build',))
+[1.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.258s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pi/snowbot_ws'
+[1.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[1.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[1.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extensions ['ignore', 'ignore_ament_install']
+[1.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extension 'ignore'
+[1.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extension 'ignore_ament_install'
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extensions ['colcon_pkg']
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extension 'colcon_pkg'
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extensions ['colcon_meta']
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extension 'colcon_meta'
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extensions ['ros']
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_motors) by extension 'ros'
+[1.322s] DEBUG:colcon.colcon_core.package_identification:Package 'src/snowbot_motors' with type 'ros.ament_python' and name 'snowbot_motors'
+[1.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extensions ['ignore', 'ignore_ament_install']
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extension 'ignore'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extension 'ignore_ament_install'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extensions ['colcon_pkg']
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extension 'colcon_pkg'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extensions ['colcon_meta']
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extension 'colcon_meta'
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extensions ['ros']
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extension 'ros'
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extensions ['cmake', 'python']
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extension 'cmake'
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extension 'python'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extensions ['python_setup_py']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos) by extension 'python_setup_py'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extensions ['ignore', 'ignore_ament_install']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extension 'ignore'
+[1.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extension 'ignore_ament_install'
+[1.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extensions ['colcon_pkg']
+[1.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extension 'colcon_pkg'
+[1.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extensions ['colcon_meta']
+[1.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extension 'colcon_meta'
+[1.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extensions ['ros']
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extension 'ros'
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extensions ['cmake', 'python']
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extension 'cmake'
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extension 'python'
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extensions ['python_setup_py']
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/snowbot_servos/snowbot_servos) by extension 'python_setup_py'
+[1.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.451s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/pi/snowbot_ws/install
+[1.460s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[1.466s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.626s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'cmake_args' from command line to 'None'
+[1.626s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'cmake_target' from command line to 'None'
+[1.626s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.626s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'cmake_clean_cache' from command line to 'False'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'cmake_clean_first' from command line to 'False'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'cmake_force_configure' from command line to 'False'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'ament_cmake_args' from command line to 'None'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'catkin_cmake_args' from command line to 'None'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'snowbot_motors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.627s] DEBUG:colcon.colcon_core.verb:Building package 'snowbot_motors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/snowbot_ws/build/snowbot_motors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/snowbot_ws/install/snowbot_motors', 'merge_install': False, 'path': '/home/pi/snowbot_ws/src/snowbot_motors', 'symlink_install': False, 'test_result_base': None}
+[1.628s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.631s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.631s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/snowbot_ws/src/snowbot_motors' with build type 'ament_python'
+[1.632s] Level 1:colcon.colcon_core.shell:create_environment_hook('snowbot_motors', 'ament_prefix_path')
+[1.641s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/hook/ament_prefix_path.ps1'
+[1.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/hook/ament_prefix_path.dsv'
+[1.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/hook/ament_prefix_path.sh'
+[1.651s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.652s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.853s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/snowbot_ws/src/snowbot_motors'
+[2.854s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.854s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/snowbot_ws/src/snowbot_motors': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_motors build --build-base /home/pi/snowbot_ws/build/snowbot_motors/build install --record /home/pi/snowbot_ws/build/snowbot_motors/install.log --single-version-externally-managed install_data
+[5.820s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/snowbot_ws/src/snowbot_motors' returned '0': PYTHONPATH=/home/pi/snowbot_ws/build/snowbot_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/snowbot_motors build --build-base /home/pi/snowbot_ws/build/snowbot_motors/build install --record /home/pi/snowbot_ws/build/snowbot_motors/install.log --single-version-externally-managed install_data
+[5.831s] Level 1:colcon.colcon_core.environment:checking '/home/pi/snowbot_ws/install/snowbot_motors' for CMake module files
+[5.834s] Level 1:colcon.colcon_core.environment:checking '/home/pi/snowbot_ws/install/snowbot_motors' for CMake config files
+[5.838s] Level 1:colcon.colcon_core.environment:checking '/home/pi/snowbot_ws/install/snowbot_motors/lib'
+[5.839s] Level 1:colcon.colcon_core.environment:checking '/home/pi/snowbot_ws/install/snowbot_motors/bin'
+[5.839s] Level 1:colcon.colcon_core.environment:checking '/home/pi/snowbot_ws/install/snowbot_motors/lib/pkgconfig/snowbot_motors.pc'
+[5.840s] Level 1:colcon.colcon_core.environment:checking '/home/pi/snowbot_ws/install/snowbot_motors/lib/python3.10/site-packages'
+[5.840s] Level 1:colcon.colcon_core.shell:create_environment_hook('snowbot_motors', 'pythonpath')
+[5.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/hook/pythonpath.ps1'
+[5.843s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/hook/pythonpath.dsv'
+[5.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/hook/pythonpath.sh'
+[5.848s] Level 1:colcon.colcon_core.environment:checking '/home/pi/snowbot_ws/install/snowbot_motors/bin'
+[5.848s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(snowbot_motors)
+[5.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/package.ps1'
+[5.853s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/package.dsv'
+[5.856s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/package.sh'
+[5.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/package.bash'
+[5.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/snowbot_ws/install/snowbot_motors/share/snowbot_motors/package.zsh'
+[5.866s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/snowbot_ws/install/snowbot_motors/share/colcon-core/packages/snowbot_motors)
+[5.867s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.869s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.869s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.869s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.889s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[5.889s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.890s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.890s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.893s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[5.893s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.894s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/snowbot_ws/install/local_setup.ps1'
+[5.898s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/snowbot_ws/install/_local_setup_util_ps1.py'
+[5.903s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/snowbot_ws/install/setup.ps1'
+[5.908s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/snowbot_ws/install/local_setup.sh'
+[5.911s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/snowbot_ws/install/_local_setup_util_sh.py'
+[5.914s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/snowbot_ws/install/setup.sh'
+[5.918s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/snowbot_ws/install/local_setup.bash'
+[5.921s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/snowbot_ws/install/setup.bash'
+[5.925s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/snowbot_ws/install/local_setup.zsh'
+[5.927s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/snowbot_ws/install/setup.zsh'

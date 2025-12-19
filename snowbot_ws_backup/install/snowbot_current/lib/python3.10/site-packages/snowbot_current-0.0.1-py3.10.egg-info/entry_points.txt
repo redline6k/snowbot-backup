@@ -1,0 +1,3 @@
+[console_scripts]
+current_node = snowbot_current.current_node:main
+

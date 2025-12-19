@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000920] (-) JobUnselected: {'identifier': 'snowbot_current'}
+[0.001089] (-) JobUnselected: {'identifier': 'snowbot_imu'}
+[0.001446] (-) JobUnselected: {'identifier': 'snowbot_motors'}
+[0.001531] (-) JobUnselected: {'identifier': 'snowbot_servos'}
+[0.001812] (-) JobUnselected: {'identifier': 'snowbot_ultrasonics'}
+[0.002163] (-) EventReactorShutdown: {}
