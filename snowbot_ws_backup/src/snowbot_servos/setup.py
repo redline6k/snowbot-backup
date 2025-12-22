@@ -19,8 +19,10 @@ setup(
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [
-            'servo_node = snowbot_servos.servo_node:main',
-        ],
-    },
+    'console_scripts': [
+        'servo_node = snowbot_servos.servo_node:main',
+        'battery_monitor = snowbot_servos.battery_monitor:main',
+        'weather_monitor = snowbot_servos.weather_monitor:main',
+    ],
+},
 )
