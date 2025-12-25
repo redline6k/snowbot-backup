@@ -4,6 +4,7 @@ from geometry_msgs.msg import Twist
 import RPi.GPIO as GPIO
 import time
 
+
 class MotorNode(Node):
     def __init__(self):
         super().__init__('motor_node')
@@ -18,13 +19,19 @@ class MotorNode(Node):
         self.left_in1 = 27  # IN3
         self.left_in2 = 22  # IN4
         self.left_pwm_pin = 13  # ENB
-        # Right motor now on left channel (IN1/IN2/ENA)
-        self.right_in3 = 17 # IN1
-        self.right_in4 = 18 # IN2
-        self.right_pwm_pin = 12 # ENA
 
-        GPIO.setup([self.left_in1, self.left_in2, self.right_in3, self.right_in4], GPIO.OUT, initial=GPIO.LOW)
+        # Right motor now on left channel (IN1/IN2/ENA)
+        self.right_in3 = 17  # IN1
+        self.right_in4 = 18  # IN2
+        self.right_pwm_pin = 12  # ENA
+
+        GPIO.setup(
+            [self.left_in1, self.left_in2, self.right_in3, self.right_in4],
+            GPIO.OUT,
+            initial=GPIO.LOW
+        )
         GPIO.setup([self.left_pwm_pin, self.right_pwm_pin], GPIO.OUT)
+
         self.left_pwm = GPIO.PWM(self.left_pwm_pin, 1000)
         self.right_pwm = GPIO.PWM(self.right_pwm_pin, 1000)
         self.left_pwm.start(0)
@@ -37,24 +44,24 @@ class MotorNode(Node):
 
     def cmd_vel_callback(self, msg):
         linear_x = msg.linear.x
-        angular_z = msg.angular.z
-        angular_z = -angular_z   # ← FLIPS TURN DIRECTION (RIGHT = +0.5, LEFT = -0.5)
+        angular_z = msg.angular.z   # standard ROS: +z = left, -z = right
 
         turn_scale = 0.8
         left_speed = linear_x - (angular_z * turn_scale)
         right_speed = linear_x + (angular_z * turn_scale)
+
+        # Clamp to [-1, 1]
         left_speed = max(-1.0, min(1.0, left_speed))
         right_speed = max(-1.0, min(1.0, right_speed))
 
-        # Flip sign so forward command goes forward
-        # Flip forward/reverse (already done)
+        # If forward/backward are reversed physically, keep these flips.
+        # If they’re wrong, remove the minus signs and test again.
         left_speed = -left_speed
         right_speed = -right_speed
 
-        # Flip turn direction so +angular.z = right turn
-        angular_z = -angular_z
-
-        self.get_logger().info(f'Left: {left_speed:.2f}, Right: {right_speed:.2f}')
+        self.get_logger().info(
+            f'Left: {left_speed:.2f}, Right: {right_speed:.2f}'
+        )
         self.set_motor(self.left_in1, self.left_in2, self.left_pwm, left_speed)
         self.set_motor(self.right_in3, self.right_in4, self.right_pwm, right_speed)
 
@@ -80,6 +87,7 @@ class MotorNode(Node):
             GPIO.output(in_forward, GPIO.LOW)
             GPIO.output(in_reverse, GPIO.LOW)
 
+
 def main(args=None):
     rclpy.init(args=args)
     node = MotorNode()
@@ -93,6 +101,7 @@ def main(args=None):
         GPIO.cleanup()
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

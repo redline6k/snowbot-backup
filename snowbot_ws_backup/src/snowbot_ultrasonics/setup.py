@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'ultrasonic_node = snowbot_ultrasonics.ultrasonic_node:main',        ],
+            'ultrasonic_node = snowbot_ultrasonics.ultrasonic_node:main',
+             'ultrasonic_visualizer = snowbot_ultrasonics.ultrasonic_visualizer:main',
+       ],
     },
 )
