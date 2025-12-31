@@ -1,0 +1,159 @@
+[0.463s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list']
+[0.463s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=False, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa0aa4eb0>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0xffffa0a6fd90>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0xffffa0a6fd90>>, mixin_verb=('list',))
+[1.383s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.383s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.384s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pi/snowbot_ws/src'
+[1.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.440s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.440s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.440s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.440s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.441s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.443s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.443s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.443s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extensions ['ignore', 'ignore_ament_install']
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extension 'ignore'
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extension 'ignore_ament_install'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extensions ['colcon_pkg']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extension 'colcon_pkg'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extensions ['colcon_meta']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extension 'colcon_meta'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extensions ['ros']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_autonomy) by extension 'ros'
+[1.456s] DEBUG:colcon.colcon_core.package_identification:Package 'snowbot_autonomy' with type 'ros.ament_python' and name 'snowbot_autonomy'
+[1.457s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.457s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extension 'ignore'
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extension 'ignore_ament_install'
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extensions ['colcon_pkg']
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extension 'colcon_pkg'
+[1.458s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extensions ['colcon_meta']
+[1.459s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extension 'colcon_meta'
+[1.459s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extensions ['ros']
+[1.459s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_bringup) by extension 'ros'
+[1.462s] DEBUG:colcon.colcon_core.package_identification:Package 'snowbot_bringup' with type 'ros.ament_python' and name 'snowbot_bringup'
+[1.462s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extensions ['ignore', 'ignore_ament_install']
+[1.463s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extension 'ignore'
+[1.463s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extension 'ignore_ament_install'
+[1.463s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extensions ['colcon_pkg']
+[1.463s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extension 'colcon_pkg'
+[1.464s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extensions ['colcon_meta']
+[1.464s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extension 'colcon_meta'
+[1.464s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extensions ['ros']
+[1.464s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_chute) by extension 'ros'
+[1.467s] DEBUG:colcon.colcon_core.package_identification:Package 'snowbot_chute' with type 'ros.ament_python' and name 'snowbot_chute'
+[1.467s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extensions ['ignore', 'ignore_ament_install']
+[1.468s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extension 'ignore'
+[1.468s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extension 'ignore_ament_install'
+[1.468s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extensions ['colcon_pkg']
+[1.468s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extension 'colcon_pkg'
+[1.469s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extensions ['colcon_meta']
+[1.469s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extension 'colcon_meta'
+[1.469s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extensions ['ros']
+[1.469s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_current) by extension 'ros'
+[1.472s] DEBUG:colcon.colcon_core.package_identification:Package 'snowbot_current' with type 'ros.ament_python' and name 'snowbot_current'
+[1.472s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extensions ['ignore', 'ignore_ament_install']
+[1.473s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extension 'ignore'
+[1.473s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extension 'ignore_ament_install'
+[1.474s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extensions ['colcon_pkg']
+[1.474s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extension 'colcon_pkg'
+[1.474s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extensions ['colcon_meta']
+[1.475s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extension 'colcon_meta'
+[1.475s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extensions ['ros']
+[1.475s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extension 'ros'
+[1.476s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extensions ['cmake', 'python']
+[1.476s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extension 'cmake'
+[1.476s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extension 'python'
+[1.477s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extensions ['python_setup_py']
+[1.477s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps) by extension 'python_setup_py'
+[1.478s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extensions ['ignore', 'ignore_ament_install']
+[1.478s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extension 'ignore'
+[1.479s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extension 'ignore_ament_install'
+[1.479s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extensions ['colcon_pkg']
+[1.479s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extension 'colcon_pkg'
+[1.479s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extensions ['colcon_meta']
+[1.480s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extension 'colcon_meta'
+[1.480s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extensions ['ros']
+[1.480s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extension 'ros'
+[1.481s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extensions ['cmake', 'python']
+[1.481s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extension 'cmake'
+[1.482s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extension 'python'
+[1.482s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extensions ['python_setup_py']
+[1.482s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch) by extension 'python_setup_py'
+[1.483s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[1.483s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extension 'ignore'
+[1.483s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extension 'ignore_ament_install'
+[1.483s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extensions ['colcon_pkg']
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extension 'colcon_pkg'
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extensions ['colcon_meta']
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extension 'colcon_meta'
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extensions ['ros']
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extension 'ros'
+[1.485s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extensions ['cmake', 'python']
+[1.485s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extension 'cmake'
+[1.485s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extension 'python'
+[1.485s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extensions ['python_setup_py']
+[1.485s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_gps/launch/__pycache__) by extension 'python_setup_py'
+[1.486s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extensions ['ignore', 'ignore_ament_install']
+[1.486s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extension 'ignore'
+[1.486s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extension 'ignore_ament_install'
+[1.487s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extensions ['colcon_pkg']
+[1.487s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extension 'colcon_pkg'
+[1.487s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extensions ['colcon_meta']
+[1.487s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extension 'colcon_meta'
+[1.488s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extensions ['ros']
+[1.488s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_imu) by extension 'ros'
+[1.491s] DEBUG:colcon.colcon_core.package_identification:Package 'snowbot_imu' with type 'ros.ament_python' and name 'snowbot_imu'
+[1.491s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extensions ['ignore', 'ignore_ament_install']
+[1.492s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extension 'ignore'
+[1.492s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extension 'ignore_ament_install'
+[1.492s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extensions ['colcon_pkg']
+[1.492s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extension 'colcon_pkg'
+[1.493s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extensions ['colcon_meta']
+[1.493s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extension 'colcon_meta'
+[1.493s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extensions ['ros']
+[1.493s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_motors) by extension 'ros'
+[1.496s] DEBUG:colcon.colcon_core.package_identification:Package 'snowbot_motors' with type 'ros.ament_python' and name 'snowbot_motors'
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extensions ['ignore', 'ignore_ament_install']
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extension 'ignore'
+[1.497s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extension 'ignore_ament_install'
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extensions ['colcon_pkg']
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extension 'colcon_pkg'
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extensions ['colcon_meta']
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extension 'colcon_meta'
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extensions ['ros']
+[1.498s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_servos) by extension 'ros'
+[1.501s] DEBUG:colcon.colcon_core.package_identification:Package 'snowbot_servos' with type 'ros.ament_python' and name 'snowbot_servos'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extensions ['ignore', 'ignore_ament_install']
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extension 'ignore'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extension 'ignore_ament_install'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extensions ['colcon_pkg']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extension 'colcon_pkg'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extensions ['colcon_meta']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extension 'colcon_meta'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extensions ['ros']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(snowbot_ultrasonics) by extension 'ros'
+[1.506s] DEBUG:colcon.colcon_core.package_identification:Package 'snowbot_ultrasonics' with type 'ros.ament_python' and name 'snowbot_ultrasonics'
+[1.506s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.507s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.507s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.507s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.507s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults

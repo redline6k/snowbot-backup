@@ -23,7 +23,8 @@ setup(
     entry_points={
         'console_scripts': [
             'obstacle_avoidance = snowbot_autonomy.obstacle_avoidance:main',
-            'teleop_keyboard = snowbot_autonomy.teleop_keyboard:main',
+            'autonomous_controller = snowbot_autonomy.autonomous_controller:main',
         ],
     },
+
 )

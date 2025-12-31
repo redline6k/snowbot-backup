@@ -28,12 +28,12 @@ class UltrasonicVisualizer(Node):
         # [x_meters, y_meters, yaw_degrees]
         # x+ = forward, y+ = left, yaw: 0=forward, 90=left, 180=back, -90=right
         self.sensor_poses = {
-            0: [0.30, 0.20, 45],    # Left Front
-            1: [0.30, -0.20, -45],  # Right Front
+            0: [0.30, 0.20, 0],    # Left Front
+            1: [0.30, -0.20, 0],  # Right Front
             2: [0.0, 0.20, 90],     # Left Center
             3: [0.0, -0.20, -90],   # Right Center
-            4: [-0.30, 0.20, 135],  # Left Rear
-            5: [-0.30, -0.20, -135],# Right Rear
+            4: [-0.30, 0.20, 180],  # Left Rear
+            5: [-0.30, -0.20, 180],# Right Rear
         }
         
         # Timer to publish markers

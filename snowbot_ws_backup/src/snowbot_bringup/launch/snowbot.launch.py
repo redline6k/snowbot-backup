@@ -74,35 +74,43 @@ def generate_launch_description():
             output="screen"
         ),
 
-# Camera
-Node(
-    package='v4l2_camera',
-    executable='v4l2_camera_node',
-    name='v4l2_camera_node',
-    parameters=[{
-        'video_device': '/dev/video0',
-        'image_size': [320, 240],
-        'camera_frame_id': 'camera_link',
-    }],
-    output='screen'
-),
+	# Front camera (existing)
+	Node(
+	    package='v4l2_camera',
+	    executable='v4l2_camera_node',
+	    name='front_camera_node',
+	    namespace='front_camera',
+	    parameters=[{
+	        'video_device': '/dev/video0',  # Front camera device
+	        'image_size': [320, 240],
+	        'pixel_format': 'YUYV',
+	        'camera_frame_id': 'front_camera_link',
+	        'output_encoding': 'bgr8'  # Fixed encoding to avoid cv_bridge crash
+	    }],
+	    remappings=[
+	        ('image_raw', 'front_camera/image_raw'),
+	        ('camera_info', 'front_camera/camera_info')
+	    ]
+	),
 
-	# Rear Camera
-#	Node(
-#	    package='usb_cam',
-#	    executable='usb_cam_node_exe',
-#	    name='rear_camera',
-#	    namespace='camera_rear',
-#	    parameters=[{
-#	        'video_device': '/dev/video2',
-#	        'image_width': 160,
-#	        'image_height': 120,
-#	        'framerate': 5.0,
-#	        'pixel_format': 'mjpeg2rgb',  # Handles MJPEG properly
-#	        'camera_name': 'rear_camera',
-#	    }],
-#	    output='screen'
-#	),
+	# Rear camera (new)
+	Node(
+	    package='v4l2_camera',
+	    executable='v4l2_camera_node',
+	    name='rear_camera_node',
+	    namespace='rear_camera',
+	    parameters=[{
+	        'video_device': '/dev/video2',  # Rear camera device (adjust as needed)
+	        'image_size': [320, 240],
+	        'pixel_format': 'YUYV',
+	        'camera_frame_id': 'rear_camera_link',
+	        'output_encoding': 'bgr8'
+	    }],
+	    remappings=[
+	        ('image_raw', 'rear_camera/image_raw'),
+	        ('camera_info', 'rear_camera/camera_info')
+	    ]
+	),
 
         # Camera compression throttle for Foxglove
  #       Node(
