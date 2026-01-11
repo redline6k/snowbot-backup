@@ -127,6 +127,13 @@ def generate_launch_description():
 #            arguments=['messages', '/camera_rear/image_raw/compressed', '5.0', '/camera_rear/image_viz/compressed'],
 #            output='screen'
 #        ),
+	#Weather
+	Node(
+	    package='snowbot_servos',  # or whatever package name you use
+	    executable='weather_monitor',
+	    name='weather_monitor',
+	    output='screen'
+	),
 
 
         # Foxglove Bridge for web interface
@@ -140,3 +147,17 @@ def generate_launch_description():
             output='screen'
         ),
     ])
+# IMU Fusion (add this block)
+Node(
+    package='imu_filter_madgwick',
+    executable='imu_filter_madgwick_node',
+    name='imu_fusion',
+    remappings=[
+        ('/imu/data_raw', '/imu/data')
+    ],
+    parameters=[{
+        'use_mag': True,
+        'publish_tf': True
+    }],
+    output='screen'
+),

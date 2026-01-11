@@ -18,6 +18,7 @@ class SnowbotNode(Node):
             self.kit.servo[ch].set_pulse_width_range(500, 2500)
 
         self.kit.servo[3].set_pulse_width_range(1000, 2000)
+        self.kit.servo[3].actuation_range = 180
 
         self.left_stop = 23
         self.right_stop = 24
@@ -134,7 +135,7 @@ class SnowbotNode(Node):
                 )
             
             # CHANGED: Reversed auger direction (was 90 + ...)
-            angle = 90 - self.current_auger_speed * 90
+            angle = 90 + self.current_auger_speed * 90
             self.kit.servo[3].angle = angle
 
     # NEW: LED control callback

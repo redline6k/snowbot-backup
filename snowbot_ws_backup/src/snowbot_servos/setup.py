@@ -23,6 +23,7 @@ setup(
         'servo_node = snowbot_servos.servo_node:main',
         'battery_monitor = snowbot_servos.battery_monitor:main',
         'weather_monitor = snowbot_servos.weather_monitor:main',
+        'snowbot_waypoint_follower = snowbot_servos.snowbot_waypoint_follower:main',
     ],
 },
 )
