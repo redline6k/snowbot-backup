@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import NavSatFix, MagneticField
+from sensor_msgs.msg import NavSatFix, Imu, MagneticField
 from geometry_msgs.msg import Twist
 import math
 import tf_transformations
@@ -20,7 +20,7 @@ class SnowbotWaypoint(Node):
         self.get_logger().info("Snowbot Waypoint Follower READY - GPS + Mag compass")
         self.gps_sub = self.create_subscription(NavSatFix, "/fix", self.gps_cb, 10)
         self.mag_sub = self.create_subscription(
-            MagneticField, "/imu/mag", self.mag_cb, 10
+            MagneticField, "/rm3100/mag", self.mag_cb, 10
         )
         self.cmd_pub = self.create_publisher(Twist, "/cmd_vel", 10)
         self.current_lat = 41.677542
@@ -28,7 +28,7 @@ class SnowbotWaypoint(Node):
         self.current_heading = 0.0
         self.gps_valid = False
         self.waypoint_idx = 0
-        self.mag_offsets = [-25.8, 41.625, -18.9]  # Your figure-8 μT
+        self.mag_offsets = [50.2, 87.8, -153.2]
         self.waypoints = [
             (41.677549, -71.184747),  # WP0: Current noisy GPS
             (41.677544, -71.184750),  # WP1: 5m SW
@@ -37,26 +37,28 @@ class SnowbotWaypoint(Node):
             (41.677549, -71.184747),  # WP4: Home
         ]
 
+    def mag_cb(self, msg):
+        mx = msg.magnetic_field.x * 1e6 - self.mag_offsets[0]
+        my = msg.magnetic_field.y * 1e6 - self.mag_offsets[1]
+        if abs(mx) > 400 or abs(my) > 400:
+            return
+
+        heading = math.degrees(math.atan2(my, mx))
+        self.current_heading = normalize_angle(heading)
+        self.get_logger().info(
+            f"RM3100 Mag: [{mx:.1f},{my:.1f}] heading:{self.current_heading:6.1f}°"
+        )
+
     def gps_cb(self, msg):
         cov = msg.position_covariance[0]
-        self.gps_valid = msg.status.status == 0 and cov < 200.0
+        # Accept any non-error fix (status >= 0), and keep a loose cov check
+        self.gps_valid = msg.status.status >= 0 and cov < 50.0
         if self.gps_valid:
             self.current_lat = msg.latitude
             self.current_lon = msg.longitude
             self.get_logger().info(
-                f"GPS OK cov:{cov:.1f}m pos:{self.current_lat:.7f},{self.current_lon:.7f}"
+                f"GPS OK cov:{cov:.4f} pos:{self.current_lat:.7f},{self.current_lon:.7f}"
             )
-
-    def mag_cb(self, msg):
-        mx = msg.magnetic_field.x * 1000000.0 - self.mag_offsets[0]
-        my = msg.magnetic_field.y * 1000000.0 - self.mag_offsets[1]
-        if abs(mx) > 250 or abs(my) > 250:  # Motor interference
-            return
-
-        self.current_heading = normalize_angle(math.degrees(math.atan2(my, mx)))
-        self.get_logger().info(
-            f"Mag: [{mx:.1f},{my:.1f}] heading:{self.current_heading:6.1f}°"
-        )
 
     def timer_cb(self):
         if not self.gps_valid:

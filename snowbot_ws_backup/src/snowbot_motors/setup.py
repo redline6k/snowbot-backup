@@ -25,6 +25,10 @@ setup(
     entry_points={
         'console_scripts': [
                      'motor_node = snowbot_motors.motor_node:main',
+                     'odom_test = snowbot_motors.odom_test:main',
+                     'indoor_odom_test = snowbot_motors.indoor_odom_test:main',
+                     'drift_odom_test = snowbot_motors.drift_odom_test:main',
+                     'bench_encoder_test = snowbot_motors.bench_encoder_test:main',
         ],
     },
 )
