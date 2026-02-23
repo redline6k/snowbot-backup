@@ -1,3 +1,0 @@
-[console_scripts]
-motor_node = snowbot_motors.motor_node:main
-
