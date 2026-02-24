@@ -4,6 +4,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Range
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64, Float64MultiArray
+from std_srvs.srv import SetBool
 
 
 class AutonomousController(Node):
@@ -37,7 +38,8 @@ class AutonomousController(Node):
         )
 
         # Autonomous state
-        self.enabled = True
+        self.declare_parameter('start_enabled', False)
+        self.enabled = self.get_parameter('start_enabled').get_parameter_value().bool_value
         self.forward_speed = 0.5  # m/s - increased from 0.3
         self.turn_speed = 0.8     # rad/s - increased from 0.5
 
@@ -48,6 +50,13 @@ class AutonomousController(Node):
         # Raise lift servos at startup for testing (run once)
         self.lift_raised = False
         self.lift_timer = self.create_timer(1.0, self.raise_lift)
+
+        # Service to enable/disable autonomous mode (mission start/stop)
+        self.enable_service = self.create_service(
+            SetBool,
+            'set_autonomy_enabled',
+            self.set_autonomy_enabled_cb,
+        )
 
         # Control timer - 10 Hz
         self.create_timer(0.1, self.control_loop)
@@ -81,10 +90,37 @@ class AutonomousController(Node):
         """Store latest sensor reading."""
         self.distances[sensor_id] = msg.range
 
+    def set_autonomy_enabled_cb(self, request, response):
+        """Service callback to start/stop autonomous control."""
+        requested_state = request.data
+
+        if requested_state == self.enabled:
+            response.success = True
+            response.message = f'Autonomy already {"enabled" if self.enabled else "disabled"}.'
+            return response
+
+        self.enabled = requested_state
+
+        if not self.enabled:
+            # On disable, issue a single stop command so the robot halts,
+            # then leave /cmd_vel_input free for teleop or other sources.
+            self.stop()
+            self.get_logger().info('Autonomous mode DISABLED.')
+        else:
+            # Reset target heading when starting a mission so we hold
+            # the current heading as the reference.
+            self.target_heading = self.heading
+            self.get_logger().info('Autonomous mode ENABLED. Target heading reset.')
+
+        response.success = True
+        response.message = f'Autonomy {"enabled" if self.enabled else "disabled"}.'
+        return response
+
     def control_loop(self):
         """Main autonomous control logic."""
         if not self.enabled:
-            self.stop()
+            # When not enabled, do not publish commands so teleop or
+            # other sources can drive /cmd_vel_input without interference.
             return
 
         # Get sensor readings

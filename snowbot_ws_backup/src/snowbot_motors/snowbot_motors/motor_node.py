@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""
+PCA9685/Sabertooth motor node with smoothing for smooth teleop.
+Reduces jerky motion via velocity ramping and softened deadzone handling.
+"""
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
@@ -47,6 +51,19 @@ class MotorController(Node):
     def __init__(self):
         super().__init__("motor_controller")
 
+        # Declare parameters for smoothing
+        self.declare_parameter("control_rate_hz", 50.0)
+        self.declare_parameter("max_vel_accel_per_sec", 150.0)  # velocity units/sec
+        self.declare_parameter("cmd_timeout_sec", 0.5)
+        self.declare_parameter("vel_deadband", 0.1)
+        self.declare_parameter("use_breakout_kick", False)  # Disabled by default – can cause jerk
+
+        control_rate = self.get_parameter("control_rate_hz").value
+        self.max_accel = self.get_parameter("max_vel_accel_per_sec").value / control_rate
+        self.cmd_timeout = self.get_parameter("cmd_timeout_sec").value
+        self.vel_deadband = self.get_parameter("vel_deadband").value
+        self.use_breakout_kick = self.get_parameter("use_breakout_kick").value
+
         # 1. Hardware Initialization
         try:
             i2c_bus = busio.I2C(board.SCL, board.SDA)
@@ -65,10 +82,12 @@ class MotorController(Node):
         self.right_pid = PIDController(kp, ki, kd, -300, 300)
 
         # 4. State Variables
-        self.desired_left_vel = self.desired_right_vel = 0.0
+        self.target_left_vel = self.target_right_vel = 0.0
+        self.smoothed_left_vel = self.smoothed_right_vel = 0.0
         self.measured_left_vel = self.measured_right_vel = 0.0
         self.x = self.y = self.theta = 0.0
         self.last_time = self.get_clock().now()
+        self.last_cmd_time = self.get_clock().now()
 
         # 5. Comms
         self.cmd_vel_sub = self.create_subscription(
@@ -78,10 +97,13 @@ class MotorController(Node):
             Float32MultiArray, "/wheel_velocities", self.encoder_callback, 10
         )
         self.odom_pub = self.create_publisher(Odometry, "odom", 10)
-        self.control_timer = self.create_timer(0.1, self.control_loop)
+        self.control_timer = self.create_timer(1.0 / control_rate, self.control_loop)
 
         self.set_motors(1500, 1500)
-        self.get_logger().info("SNOWBOT RESET: Version 2.0 scale .10 mult 7.5 limit 120")
+        self.get_logger().info(
+            f"SNOWBOT: smoothing enabled ({control_rate}Hz, "
+            f"max_accel={self.max_accel * control_rate:.0f}/s)"
+        )
 
     def set_motors(self, left_us, right_us):
         # PWM to Duty Cycle Conversion
@@ -91,49 +113,78 @@ class MotorController(Node):
         self.pca.channels[self.SABERTOOTH_S2].duty_cycle = r_duty
 
     def cmd_vel_callback(self, msg: Twist):
-        # scale = 0.1 allows for more input speed before the math happens
         scale = 0.10
         v_l = (msg.linear.x * scale) - (msg.angular.z * scale * self.wheel_base / 2.0)
         v_r = (msg.linear.x * scale) + (msg.angular.z * scale * self.wheel_base / 2.0)
-        self.desired_left_vel = (v_l / self.wheel_radius) * self.gear_ratio
-        self.desired_right_vel = (v_r / self.wheel_radius) * self.gear_ratio
+        self.target_left_vel = (v_l / self.wheel_radius) * self.gear_ratio
+        self.target_right_vel = (v_r / self.wheel_radius) * self.gear_ratio
+        self.last_cmd_time = self.get_clock().now()
+
+    def _clamp_step(self, current: float, target: float) -> float:
+        """Rate-limit velocity change for smooth acceleration."""
+        delta = target - current
+        if delta > self.max_accel:
+            return current + self.max_accel
+        if delta < -self.max_accel:
+            return current - self.max_accel
+        return target
+
+    def _apply_deadband(self, val: float) -> float:
+        if abs(val) < self.vel_deadband:
+            return 0.0
+        return val
 
     def control_loop(self):
         curr_t = self.get_clock().now().nanoseconds / 1e9
+        now = self.get_clock().now()
+        dt_since_cmd = (now - self.last_cmd_time).nanoseconds / 1e9
+
+        # Timeout: ramp to stop if no cmd_vel
+        if dt_since_cmd > self.cmd_timeout:
+            self.target_left_vel = 0.0
+            self.target_right_vel = 0.0
+
+        # Apply deadband to reduce joystick jitter
+        t_left = self._apply_deadband(self.target_left_vel)
+        t_right = self._apply_deadband(self.target_right_vel)
+
+        # Ramp smoothed velocities toward targets
+        self.smoothed_left_vel = self._clamp_step(self.smoothed_left_vel, t_left)
+        self.smoothed_right_vel = self._clamp_step(self.smoothed_right_vel, t_right)
 
         # Stop check
-        if abs(self.desired_left_vel) < 0.1 and abs(self.desired_right_vel) < 0.1:
+        if abs(self.smoothed_left_vel) < self.vel_deadband and abs(
+            self.smoothed_right_vel
+        ) < self.vel_deadband:
             self.left_pid.reset()
             self.right_pid.reset()
             self.set_motors(1500, 1500)
             return
 
-        # PID Corrections
+        # PID Corrections (use smoothed velocities)
         l_corr = self.left_pid.compute(
-            self.desired_left_vel, self.measured_left_vel, curr_t
+            self.smoothed_left_vel, self.measured_left_vel, curr_t
         )
         r_corr = self.right_pid.compute(
-            self.desired_right_vel, self.measured_right_vel, curr_t
+            self.smoothed_right_vel, self.measured_right_vel, curr_t
         )
 
-        # --- POWER SECTION ---
-        # mult = 35.0 (Raw muscle)
-        # limit = 450 (90% Power potential)
         mult = 7.5
         limit = 120
 
-        l_pwm = 1500 + int(self.desired_left_vel * mult + l_corr)
-        r_pwm = 1500 + int(self.desired_right_vel * mult + r_corr)
+        l_pwm = 1500 + int(self.smoothed_left_vel * mult + l_corr)
+        r_pwm = 1500 + int(self.smoothed_right_vel * mult + r_corr)
 
-        # Breakout Force (Deadzone Kick)
-        if 1500 < l_pwm < 1512:
-            l_pwm = 1518
-        if 1488 < l_pwm < 1500:
-            l_pwm = 1482
-        if 1500 < r_pwm < 1512:
-            r_pwm = 1518
-        if 1488 < r_pwm < 1500:
-            r_pwm = 1482
+        # Breakout Force – optional; can cause jerk when enabled
+        if self.use_breakout_kick:
+            if 1500 < l_pwm < 1512:
+                l_pwm = 1518
+            if 1488 < l_pwm < 1500:
+                l_pwm = 1482
+            if 1500 < r_pwm < 1512:
+                r_pwm = 1518
+            if 1488 < r_pwm < 1500:
+                r_pwm = 1482
 
         self.set_motors(
             max(1500 - limit, min(1500 + limit, l_pwm)),
